@@ -1,0 +1,149 @@
+---
+title: Error Handling & TypeScript in React
+author: Dipesh Aryal
+date: 2025-06-11
+description: Practical guide to error handling with error boundaries and mastering TypeScript in React
+---
+
+---
+
+## 4. Error Handling in React with Error Boundaries
+
+**Source:** [YouTube Video](https://youtu.be/AdmGHwvgaVs?si=nuls3lnMFXeNyLCg)
+
+### 4.1. Types of Errors in React
+
+- **Expected Errors:**
+
+  - Examples: Form validation failure, known API response errors
+  - **Solution:** Return error messages instead of throwing errors
+
+```tsx
+// Form validation example
+type FormState = { message: string | null; status: 'success' | 'error' }
+
+async function handleSubmit(prevState: FormState, formData: FormData): Promise<FormState> {
+  const email = formData.get('email')
+  if (typeof email !== 'string' || !email.includes('@')) {
+    return { status: 'error', message: 'Invalid email format' }
+  }
+  return { status: 'success', message: 'User registered successfully!' }
+}
+```
+
+- **Unexpected Errors:**
+
+  - Examples: Runtime crashes, failed data fetches
+  - **Solution:** Use **Error Boundaries** to isolate the crash
+
+### 4.2. Error Boundaries in React
+
+- Implemented using class components
+- Catch errors in render lifecycle, not async code
+
+**Limitations:**
+
+- Don't catch errors in:
+
+  - Event handlers
+  - Async code
+  - SSR
+  - The error boundary itself
+
+### 4.3. Using `react-error-boundary`
+
+**Install:**
+
+```bash
+npm install react-error-boundary
+```
+
+**Usage Example:**
+
+```tsx
+import { ErrorBoundary } from 'react-error-boundary'
+
+function Fallback({ error, resetErrorBoundary }) {
+  return (
+    <div role="alert">
+      <p>Something went wrong:</p>
+      <pre>{error.message}</pre>
+      <button onClick={resetErrorBoundary}>Try again</button>
+    </div>
+  )
+}
+
+function App() {
+  return (
+    <ErrorBoundary
+      FallbackComponent={Fallback}
+      onError={(error, info) => console.error('Logged to Sentry:', error, info)}
+      onReset={() => console.log('Error boundary reset!')}
+    >
+      <MyComponentThatMightThrow />
+    </ErrorBoundary>
+  )
+}
+```
+
+**Async Error Handling (manually):**
+
+```tsx
+import { useErrorBoundary } from 'react-error-boundary'
+
+function MyAsyncComponent() {
+  const { showBoundary } = useErrorBoundary()
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch('/api/data')
+      if (!response.ok) throw new Error('Network response was not ok')
+      const data = await response.json()
+    } catch (error: any) {
+      showBoundary(error)
+    }
+  }
+
+  return <button onClick={fetchData}>Fetch Data</button>
+}
+```
+
+---
+
+## 5. Master React with TypeScript
+
+**Source:** [YouTube Video](https://youtu.be/TPACABQTHvM?si=ngr824DKJx6KKVpt)
+
+### 5.1. Convert JSX to TSX
+
+- Just rename `.jsx` to `.tsx`
+
+### 5.2. Type Annotations & Inference
+
+```tsx
+let name: string = 'Alice' // annotation
+let age = 30 // inferred as number
+const isStudent: boolean = false
+```
+
+### 5.3. Typing Functions
+
+```tsx
+function greet(name: string): string {
+  return `Hello, ${name}!`
+}
+
+const add = (a: number, b: number): number => a + b
+```
+
+### 5.4. Typing React Component Props
+
+```tsx
+// MyComponent.tsx
+function MyComponent(props: { message: string }) {
+  return <div>{props.message}</div>
+}
+
+// Usage:
+// <MyComponent message="Hello from props!" />
+```
