@@ -17,6 +17,7 @@ function CodeBlock({ children }: CodeBlockProps) {
 }
 
 export const components = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   pre: ({ children }: any) => {
     const code = children?.props?.children || ''
     return <CodeBlock>{code}</CodeBlock>
