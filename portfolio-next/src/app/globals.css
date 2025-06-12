@@ -77,15 +77,15 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
-  --sh-class: #2d5e9d;
-  --sh-identifier: #354150;
-  --sh-sign: #8996a3;
-  --sh-property: #0550ae;
-  --sh-entity: #249a97;
-  --sh-jsxliterals: #6266d1;
-  --sh-string: #00a99a;
-  --sh-keyword: #f47067;
-  --sh-comment: #a19595;
+  --sh-class: #79c0ff;
+  --sh-identifier: #c9d1d9;
+  --sh-sign: #6e7681;
+  --sh-property: #d2a8ff;
+  --sh-entity: #ffa657;
+  --sh-jsxliterals: #a5d6ff;
+  --sh-string: #a5d6ff;
+  --sh-keyword: #ff7b72;
+  --sh-comment: #8b949e;
 }
 
 .dark {
@@ -120,6 +120,15 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.552 0.016 285.938);
+  --sh-class: #79c0ff;
+  --sh-identifier: #c9d1d9;
+  --sh-sign: #6e7681;
+  --sh-property: #d2a8ff;
+  --sh-entity: #ffa657;
+  --sh-jsxliterals: #a5d6ff;
+  --sh-string: #a5d6ff;
+  --sh-keyword: #ff7b72;
+  --sh-comment: #8b949e;
 }
 
 @layer base {
@@ -132,12 +141,25 @@
   .title {
     @apply w-fit border-b-2 border-gray-400 py-0 font-serif text-3xl font-bold;
   }
+  /* For code blocks (pre tags) */
   .prose pre {
-    @apply overflow-x-auto rounded-lg bg-[#0d1117] p-4 text-white;
+    @apply relative overflow-x-auto rounded-xl border p-4 font-mono shadow-md transition-colors;
+    @apply bg-gray-100 text-gray-800 dark:bg-[#0d1117] dark:text-white;
   }
 
+  /* Inline code inside prose */
   .prose code {
-    @apply font-mono text-sm text-pink-500;
+    @apply rounded-md bg-gray-200 px-1 py-0.5 font-mono text-sm text-pink-600 dark:bg-gray-800 dark:text-pink-400;
+  }
+
+  /* Optional: Add a subtle border for both themes */
+  .prose pre {
+    @apply border-gray-300 dark:border-gray-700;
+  }
+
+  /* Optional: Highlighted lines (if you ever support them) */
+  .prose pre .highlight-line {
+    @apply block w-full bg-gray-200 dark:bg-gray-800;
   }
 
   .prose code::before,

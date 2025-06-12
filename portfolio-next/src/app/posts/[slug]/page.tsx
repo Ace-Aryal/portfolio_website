@@ -33,16 +33,18 @@ async function Post({ params }: { params: Promise<{ slug: string }> }) {
           </div>
         </Link>
       </div>
-      <div className="my-4 flex w-full flex-col">
-        <div className="flex flex-col">
-          <h1 className="title mt-4 w-fit py-1">{title}</h1>
-          <p className="text-sm text-gray-600 dark:text-gray-300">
-            {author}/{formatDate(date)}
-          </p>
-          <p className="my-6 mb-10">{description}</p>
-        </div>
-        <div className="prose dark:prose-invert my-4">
-          <MDXRemote source={content} components={components} />
+      <div className="flex w-full justify-center">
+        <div className="prose dark:prose-invert my-4 flex w-full flex-col">
+          <div className="flex flex-col">
+            <h1 className="title mt-4 w-fit py-1">{title}</h1>
+            <p className="text-sm text-gray-600 dark:text-gray-300">
+              {author}/{formatDate(date)}
+            </p>
+            <p className="my-6 mb-10">{description}</p>
+          </div>
+          <div className="prose dark:prose-invert my-4">
+            <MDXRemote source={content} components={components} />
+          </div>
         </div>
       </div>
     </div>

@@ -1,11 +1,49 @@
 ---
 title: 'Music Player App'
-image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4'
-description: 'A simple music player web app built using the Deezer API to fetch and stream music.'
+image: 'https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684a72a90002e482cdfe/view?project=68465b0b0011b7d2e8b0&mode=admin'
+description: 'A simple music streaming app using the Deezer API.'
 techsUsed: 'HTML, CSS, JavaScript, Deezer API'
 date: '2023-08-10'
 ---
 
+<Image
+  src="https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684a72a90002e482cdfe/view?project=68465b0b0011b7d2e8b0&mode=admin"
+  alt="Music Player App"
+  width={1200}
+  height={400}
+  className="aspect-video rounded-lg"
+/>
+
 ## Overview
 
-The Music Player App allows users to search and stream songs using the Deezer API. It includes basic features like play/pause, next/previous track, and a responsive UI. Built purely with vanilla technologies, it was a challenge in working with external APIs and audio controls in JavaScript.
+This was one of my first interactive projects where I explored working with third-party APIs. I used the Deezer API to fetch music data and render it in a custom UI. The whole experience felt like building my own mini Spotify.
+
+## Approach
+
+I learned how to use external APIs that require API keys and handle their rate limits gracefully. I implemented a custom audio player using the native `audio` tag, which gave me control over play, pause, and seek. For the search functionality, I implemented debouncing to reduce API calls while typing, which helped me understand input optimization. Working with the data returned from the API, I practiced array manipulation and dynamic DOM rendering.
+
+<div className="mt-6 flex gap-4">
+  <Link
+    href="https://github.com/Ace-Aryal/Learning_Web/tree/main/03_Javascript/projects"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center rounded-md border border-input bg-background px-2 py-1 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
+  >
+    <span>View Source Code</span>
+  </Link>
+
+        <Link
+        href="https://ace-aryal.github.io/Learning_Web/03_Javascript/projects/Music_Player/index.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex h-8 items-center rounded-md bg-primary px-2 py-1 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90"
+
+>
+
+        <span>Live Demo </span>
+
+      </Link>
+
+  </div>
+
+---

@@ -1,11 +1,38 @@
 ---
 title: 'Weather App'
-image: 'https://images.unsplash.com/photo-1527766833261-b09c3163a791'
-description: 'A weather forecast app that fetches live data using an external weather API.'
-techsUsed: 'HTML, CSS, JavaScript'
-date: '2023-07-18'
+image: 'https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684a728b001f6fa1b971/view?project=68465b0b0011b7d2e8b0&mode=admin'
+description: 'A weather forecast app using public weather APIs.'
+techsUsed: 'HTML, CSS, JavaScript, Weather API'
+date: '2023-06-05'
 ---
+
+<Image
+  src="https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684a728b001f6fa1b971/view?project=68465b0b0011b7d2e8b0&mode=admin"
+  alt="Weather App"
+  width={1200}
+  height={400}
+  className="aspect-video rounded-lg"
+/>
 
 ## Overview
 
-The Weather App fetches current weather info for any city using a weather API and displays it with icons and temperatures. It was a practice project in making API calls and working with async/await in vanilla JS.
+This app fetches weather data from a public API and displays the forecast for a user-specified location. It shows temperature, humidity, and general conditions.
+
+## Approach
+
+I learned how to fetch and parse JSON data from APIs. The form takes user input, queries the API, and updates the UI accordingly. I also worked on error handling and fallback UI for invalid locations.
+
+<div className="mt-6 flex gap-4">
+  <Link
+    href="https://github.com/Ace-Aryal/Learning_Web/tree/main/03_Javascript/projects"
+    className="border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex items-center rounded-md border px-2 py-1 text-sm font-medium shadow-sm transition-colors"
+  >
+    <span>View Source Code</span>
+  </Link>
+  <Link
+    href="https://ace-aryal.github.io/Learning_Web/03_Javascript/projects/weatherApp/index.html"
+    className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex h-8 items-center rounded-md px-2 py-1 text-sm font-medium shadow"
+  >
+    <span>Live Demo</span>
+  </Link>
+</div>

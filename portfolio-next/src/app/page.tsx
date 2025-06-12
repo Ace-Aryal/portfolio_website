@@ -16,11 +16,11 @@ export default async function Home() {
         <Intro />
       </section>
       <section className="mt-4 flex w-full max-w-3xl flex-col px-2 py-6">
-        <h2 className="title">Recent Projects</h2>
-        <Project projects={projects} />
+        <h2 className="title px-1">Recent Projects</h2>
+        <Project gridCols="md:grid-cols-3" projects={projects} />
       </section>
       <section className="mt-4 flex max-w-3xl flex-col p-4 px-2">
-        <h2 className="title">Recent Posts</h2>
+        <h2 className="title px-1">Recent Posts</h2>
         <Post posts={posts} />
       </section>
     </div>

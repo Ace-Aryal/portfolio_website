@@ -28,7 +28,7 @@ export default function Header() {
         <nav className="hidden gap-6 md:flex">
           {navItems.map((item) => {
             const isActive =
-              item.href === pathname || (item.href.startsWith(pathname) && pathname !== '/')
+              item.href === pathname || (pathname.startsWith(item.href) && pathname !== '/')
                 ? true
                 : false
             return (

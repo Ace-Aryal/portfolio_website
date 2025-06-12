@@ -5,21 +5,32 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-function Project({ projects }: { projects: projectMetaData[] }) {
+function Project({
+  projects,
+  gridCols = '',
+}: {
+  projects: projectMetaData[]
+  gridCols?: string | ''
+}) {
   return (
-    <ul className="my-5 grid grid-cols-1 justify-center gap-5 sm:grid-cols-3 md:grid-cols-4">
+    <ul
+      className={`my-5 grid w-full grid-cols-1 place-items-center content-center justify-center gap-5 px-4 sm:grid-cols-3 ${gridCols || 'md:grid-cols-4'} `}
+    >
       {projects.map((project) => (
         <Link
           href={`/projects/${project.slug}`}
           key={project.slug}
-          className="aspect-square min-h-48 rounded-lg border-gray-500 transition-all hover:border-4"
+          className="aspect-square min-h-48 w-full rounded-lg border-gray-500 transition-all hover:border-4"
         >
           <div className="group relative aspect-square h-full w-full rounded-lg hover:bg-gray-100 hover:dark:bg-gray-800">
             <div className="absolute h-full w-full group-hover:opacity-25">
               <Image
                 fill
                 alt={project?.title || 'project image'}
-                src={project.image || ''}
+                src={
+                  project.image ||
+                  'https://upload.wikimedia.org/wikipedia/commons/4/49/No-Image-Placeholder.svg'
+                }
                 className="rounded-lg object-cover"
               />
             </div>

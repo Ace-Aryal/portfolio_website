@@ -1,11 +1,38 @@
 ---
 title: 'School Management System'
-image: 'https://images.unsplash.com/photo-1559757175-5700dde67548'
-description: 'A school management dashboard app with support for Nepali date formats, background jobs, and more.'
-techsUsed: 'React, Vite, Tailwind CSS, Shadcn UI, Redux Toolkit, React Hook Form, React Query, Appwrite, CRON jobs'
-date: '2025-05-30'
+image: 'https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684a7275002fe410ef28/view?project=68465b0b0011b7d2e8b0&mode=admin'
+description: 'A complete full-stack school management system with role-based access and Appwrite functions.'
+techsUsed: 'React, Vite, Tailwind, Shadcn UI, Appwrite, RHF, React Query, CRON Jobs'
+date: '2025-06-01'
 ---
+
+<Image
+  src="https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684a7275002fe410ef28/view?project=68465b0b0011b7d2e8b0&mode=admin"
+  alt="School Management System"
+  width={1200}
+  height={400}
+  className="aspect-video rounded-lg"
+/>
 
 ## Overview
 
-A robust admin dashboard for managing student records, notices, fees, and more. This project integrates advanced features like a Nepali date picker, Appwrite CRON functions, and cloud storage. UI components are powered by Shadcn UI, making the interface clean and modern.
+This is my biggest project so far—a full-stack school management system with role-based authentication and advanced data handling. It supports multiple user types like students, teachers, and staff, each with their own dashboard and permissions.
+
+## Approach
+
+I used Shadcn UI for building a clean and functional interface. Appwrite handled all backend logic including database, authentication, storage, and custom server-side logic via functions. React Query helped with fetching paginated data and handling cache. The project includes features like inbox, notices, user registration, attendance management (WIP), and fee billing (planned). A Nepali date picker was added for local calendar support. I even set up CRON-based Appwrite functions for auto-deletion of outdated messages. This app truly feels like building SaaS from scratch.
+
+<div className="mt-6 flex gap-4">
+  <Link
+    href="/"
+    className="border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex items-center rounded-md border px-2 py-1 text-sm font-medium shadow-sm transition-colors"
+  >
+    <span>View Source Code</span>
+  </Link>
+  <Link
+    href="/"
+    className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex h-8 items-center rounded-md px-2 py-1 text-sm font-medium shadow"
+  >
+    <span>Live Demo</span>
+  </Link>
+</div>

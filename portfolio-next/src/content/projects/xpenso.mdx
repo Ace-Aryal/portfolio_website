@@ -1,11 +1,38 @@
 ---
 title: 'Xpenso - Expense Tracker'
-image: 'https://images.unsplash.com/photo-1605902711622-cfb43c4437ae'
-description: 'Xpenso is a full-featured expense tracker app with charts, secure auth, and cloud storage.'
-techsUsed: 'React, Vite, Tailwind CSS, Mantine UI, Redux Toolkit, Appwrite'
-date: '2024-11-20'
+image: 'https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684a729c0015e4dec8a2/view?project=68465b0b0011b7d2e8b0&mode=admin'
+description: 'Track your expenses using interactive charts and Appwrite backend.'
+techsUsed: 'React, Vite, Tailwind, Mantine UI, Appwrite, Redux Toolkit'
+date: '2024-01-12'
 ---
+
+<Image
+  src="https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684a729c0015e4dec8a2/view?project=68465b0b0011b7d2e8b0&mode=admin"
+  alt="Xpenso - Expense Tracker"
+  width={1200}
+  height={400}
+  className="aspect-video rounded-lg"
+/>
 
 ## Overview
 
-Xpenso helps users log their daily expenses, view spending patterns through charts, and securely store their data in the cloud. Authentication and database are handled via Appwrite. State is managed using Redux Toolkit, and charts are created with Mantine UI components.
+Xpenso was my first full-stack app that brought together state management, user authentication, and interactive data visualization. I built this to manage personal finances with a sleek UI.
+
+## Approach
+
+I used Appwrite for authentication and as a backend database. Redux Toolkit helped manage the application state, especially with filtering, sorting, and updating expense entries. I explored Mantine UI to implement beautiful graphs and charts that visually represented monthly expense trends. This project helped me understand the full data flow from UI interaction to persistent storage.
+
+<div className="mt-6 flex gap-4">
+  <Link
+    href="https://github.com/Ace-Aryal/Xpenso"
+    className="border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex items-center rounded-md border px-2 py-1 text-sm font-medium shadow-sm transition-colors"
+  >
+    <span>View Source Code</span>
+  </Link>
+  <Link
+    href="https://expense-tracker-app-theta-one.vercel.app/dashboard"
+    className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex h-8 items-center rounded-md px-2 py-1 text-sm font-medium shadow"
+  >
+    <span>Live Demo</span>
+  </Link>
+</div>

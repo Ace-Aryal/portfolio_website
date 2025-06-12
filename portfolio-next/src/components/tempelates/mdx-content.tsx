@@ -1,8 +1,7 @@
-'use client'
-
 import { highlight } from 'sugar-high'
-
+import Image from 'next/image'
 import React from 'react'
+import Link from 'next/link'
 
 type CodeBlockProps = {
   children: string
@@ -22,4 +21,6 @@ export const components = {
     const code = children?.props?.children || ''
     return <CodeBlock>{code}</CodeBlock>
   },
+  Image,
+  Link,
 }
