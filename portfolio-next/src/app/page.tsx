@@ -5,6 +5,7 @@ import Project from '@/components/molecules/project'
 import Intro from '@/components/organisms/intro'
 import { getPosts } from '@/lib/posts'
 import { getprojects } from '@/lib/project'
+import Link from 'next/link'
 
 export default async function Home() {
   const posts = await getPosts(3)
@@ -15,13 +16,19 @@ export default async function Home() {
         {' '}
         <Intro />
       </section>
-      <section className="mt-4 flex w-full max-w-3xl flex-col px-2 py-6">
+      <section className="mt-10 flex w-full max-w-3xl flex-col px-4 py-6">
         <h2 className="title px-1">Recent Projects</h2>
         <Project gridCols="md:grid-cols-3" projects={projects} />
+        <Link className="px-4 text-sm text-gray-500 underline" href="/projects">
+          All projects
+        </Link>
       </section>
-      <section className="mt-4 flex max-w-3xl flex-col p-4 px-2">
+      <section className="mt-16 flex max-w-3xl flex-col p-4 px-4">
         <h2 className="title px-1">Recent Posts</h2>
         <Post posts={posts} />
+        <Link className="px-4 text-sm text-gray-500 underline" href="/posts">
+          All posts
+        </Link>
       </section>
     </div>
   )
