@@ -40,7 +40,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`${isActive ? 'bg-gray-200 dark:bg-gray-800' : ''} rounded-lg px-2 py-1 text-sm font-medium transition-colors hover:text-blue-700 hover:dark:text-blue-400`}
+                className={`${isActive ? 'bg-gray-200 dark:bg-gray-800' : ''} rounded-lg px-2 py-1 text-sm font-medium transition-colors hover:text-blue-700 active:text-blue-700 hover:dark:text-blue-400 active:dark:text-blue-400`}
               >
                 {item.label}
               </Link>
@@ -70,7 +70,7 @@ export default function Header() {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className={`${isActive ? 'bg-gray-200 dark:bg-gray-800' : ''} rounded-lg px-2 py-1 text-sm font-medium transition-colors hover:text-blue-700 hover:dark:text-blue-400`}
+                      className={`${isActive ? 'bg-gray-200 dark:bg-gray-800' : ''} rounded-lg px-2 py-1 text-sm font-medium transition-colors hover:text-blue-700 active:text-blue-700 hover:dark:text-blue-400 active:dark:text-blue-400`}
                     >
                       {item.label}
                     </Link>

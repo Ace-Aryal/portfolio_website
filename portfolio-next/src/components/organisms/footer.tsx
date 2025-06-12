@@ -13,7 +13,10 @@ function Footer() {
           rel="noopener noreferrer"
           aria-label="GitHub"
         >
-          <Github size={16} className="transition hover:text-black dark:hover:text-white" />
+          <Github
+            size={16}
+            className="transition hover:text-black active:text-black dark:hover:text-white dark:focus:text-white dark:active:text-white"
+          />
         </Link>
         <Link
           href="https://www.linkedin.com/in/dipesh-aryal-612536272/"
@@ -21,10 +24,10 @@ function Footer() {
           rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
-          <Linkedin size={16} className="transition hover:text-blue-600" />
+          <Linkedin size={16} className="transition hover:text-blue-600 active:text-blue-600" />
         </Link>
         <Link href="mailto:aryaldipesh404@gmail.com" aria-label="Email">
-          <Mail size={16} className="transition hover:text-red-500" />
+          <Mail size={16} className="transition hover:text-red-500 active:text-red-500" />
         </Link>
       </div>
     </footer>

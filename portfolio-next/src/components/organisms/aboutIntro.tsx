@@ -18,7 +18,7 @@ export default function AboutIntro() {
 
         <div id="image-section">
           <Image
-            className="rounded-lg grayscale-100 transition-all hover:scale-105 hover:grayscale-25"
+            className="rounded-lg grayscale-100 transition-all hover:scale-105 hover:grayscale-25 active:scale-105 active:grayscale-25"
             alt="profile-picture"
             src="https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684ab145000ff2199814/view?project=68465b0b0011b7d2e8b0&mode=admin"
             width={175}
