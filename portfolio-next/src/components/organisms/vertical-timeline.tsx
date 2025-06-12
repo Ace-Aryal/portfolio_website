@@ -6,6 +6,7 @@ function VerticalTimeline() {
     href: string
     label: string | 'Learn More'
   }
+
   type Timeline = {
     date: string
     title: string
@@ -45,7 +46,7 @@ function VerticalTimeline() {
         'Used Tailwind CSS to design and develop my first personal portfolio website to showcase my journey and projects.',
       link: {
         label: 'View Portfolio',
-        href: 'https://ace-aryal.github.io/dipesh_aryal_profile', // Replace with your actual URL if different
+        href: 'https://ace-aryal.github.io/dipesh_aryal_profile',
       },
     },
     {
@@ -55,7 +56,7 @@ function VerticalTimeline() {
         'Focused on learning JavaScript deeply by building 30+ projects covering DOM manipulation, APIs, games, and more.',
       link: {
         label: 'View Projects',
-        href: 'https://ace-aryal.github.io/Learning_Web/', // Replace with actual route if different
+        href: 'https://ace-aryal.github.io/Learning_Web/',
       },
     },
     {
@@ -71,7 +72,7 @@ function VerticalTimeline() {
         'Learned advanced React concepts, state management with Redux Toolkit, and backend integration with Appwrite. Built multiple full-stack projects.',
       link: {
         label: 'View Xpenso App',
-        href: 'https://expense-tracker-app-theta-one.vercel.app', // Replace with actual URL
+        href: 'https://expense-tracker-app-theta-one.vercel.app',
       },
     },
     {
@@ -107,7 +108,7 @@ function VerticalTimeline() {
             {timeline.link ? (
               <Link
                 href={timeline.link.href}
-                className="inline-flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:ring-4 focus:ring-gray-100 focus:outline-none active:bg-gray-100 active:text-blue-700 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:bg-gray-700 dark:focus:text-white dark:focus:ring-gray-700 dark:active:bg-gray-700 dark:active:text-white"
+                className="inline-flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-900 transition-colors hover:bg-gray-100 hover:text-blue-700 focus:bg-gray-100 focus:text-blue-700 focus:ring-4 focus:ring-gray-100 focus:outline-none active:bg-gray-100 active:text-blue-700 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:bg-gray-700 dark:focus:text-white dark:focus:ring-gray-700 dark:active:bg-gray-700 dark:active:text-white"
               >
                 {timeline.link.label}
                 <svg

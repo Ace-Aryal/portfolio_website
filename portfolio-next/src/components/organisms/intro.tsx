@@ -22,7 +22,7 @@ export default function Intro() {
             >
               <Github
                 size={18}
-                className="transition hover:text-black active:text-black dark:hover:text-white dark:focus:text-white dark:active:text-white"
+                className="transition hover:text-black focus:text-black active:text-black dark:hover:text-white dark:focus:text-white dark:active:text-white"
               />
             </a>
             <a
@@ -31,17 +31,23 @@ export default function Intro() {
               rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
-              <Linkedin size={18} className="transition hover:text-blue-600 active:text-blue-600" />
+              <Linkedin
+                size={18}
+                className="transition hover:text-blue-600 focus:text-blue-600 active:text-blue-600"
+              />
             </a>
             <a href="mailto:dipesh@example.com" aria-label="Email">
-              <Mail size={18} className="transition hover:text-red-500 active:text-red-500" />
+              <Mail
+                size={18}
+                className="transition hover:text-red-500 focus:text-red-500 active:text-red-500"
+              />
             </a>
           </div>
         </div>
 
         <div id="image-section">
           <Image
-            className="rounded-lg grayscale-100 transition-all hover:scale-105 hover:grayscale-25 active:scale-105 active:grayscale-25"
+            className="rounded-lg grayscale-100 transition-all hover:scale-105 hover:grayscale-25 focus:scale-105 focus:grayscale-25 active:scale-105 active:grayscale-25"
             alt="profile-picture"
             src="https://avatars.githubusercontent.com/u/153974691?v=4"
             width={200}

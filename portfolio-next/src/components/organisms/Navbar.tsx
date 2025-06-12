@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import ThemeToggler from '../atoms/theme-toggler'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
+
 const navItems = [
   { label: 'Posts', href: '/posts' },
   { label: 'Projects', href: '/projects' },
@@ -13,6 +14,7 @@ const navItems = [
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ]
+
 export default function Header() {
   const pathname = usePathname()
   return (
@@ -26,7 +28,7 @@ export default function Header() {
             height={30}
             width={30}
             className="dark:invert"
-          ></Image>
+          />
         </Link>
 
         {/* Center Nav - Desktop Only */}
@@ -34,13 +36,14 @@ export default function Header() {
           {navItems.map((item) => {
             const isActive =
               item.href === pathname || (pathname.startsWith(item.href) && pathname !== '/')
-                ? true
-                : false
+
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`${isActive ? 'bg-gray-200 dark:bg-gray-800' : ''} rounded-lg px-2 py-1 text-sm font-medium transition-colors hover:text-blue-700 active:text-blue-700 hover:dark:text-blue-400 active:dark:text-blue-400`}
+                className={`${
+                  isActive ? 'bg-gray-200 dark:bg-gray-800' : ''
+                } rounded-lg px-2 py-1 text-sm font-medium transition-colors hover:text-blue-700 focus:text-blue-700 active:text-blue-700 hover:dark:text-blue-400 focus:dark:text-blue-400 active:dark:text-blue-400`}
               >
                 {item.label}
               </Link>
@@ -64,13 +67,14 @@ export default function Header() {
                 {navItems.map((item) => {
                   const isActive =
                     item.href === pathname || (pathname.startsWith(item.href) && pathname !== '/')
-                      ? true
-                      : false
+
                   return (
                     <Link
                       key={item.href}
                       href={item.href}
-                      className={`${isActive ? 'bg-gray-200 dark:bg-gray-800' : ''} rounded-lg px-2 py-1 text-sm font-medium transition-colors hover:text-blue-700 active:text-blue-700 hover:dark:text-blue-400 active:dark:text-blue-400`}
+                      className={`${
+                        isActive ? 'bg-gray-200 dark:bg-gray-800' : ''
+                      } rounded-lg px-2 py-1 text-sm font-medium transition-colors hover:text-blue-700 focus:text-blue-700 active:text-blue-700 hover:dark:text-blue-400 focus:dark:text-blue-400 active:dark:text-blue-400`}
                     >
                       {item.label}
                     </Link>
