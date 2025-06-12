@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Intro() {
   return (
     <div className="grid w-full place-items-center">
-      <div className="flex max-w-3xl flex-col-reverse items-center justify-center gap-4 sm:flex-row">
+      <div className="flex flex-col-reverse items-center justify-center gap-4 sm:flex-row">
         <div className="flex flex-col gap-2" id="paragraph-section">
           <h1 className="title border-0">Namaste, I{`'`}m Dipesh</h1>
           <p className="max-w-md text-sm">

@@ -5,15 +5,14 @@ import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import ThemeToggler from '../atoms/theme-toggler'
 import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 const navItems = [
   { label: 'Posts', href: '/posts' },
   { label: 'Projects', href: '/projects' },
   { label: 'Skills', href: '/skills' },
-  { label: 'Journey', href: '/journey' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ]
-
 export default function Header() {
   const pathname = usePathname()
   return (
@@ -21,7 +20,13 @@ export default function Header() {
       <div className="container flex h-14 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="font-serif text-lg font-bold">
-          Ace.dev
+          <Image
+            alt="logo"
+            src="https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684adf0d0008c0cdec22/view?project=68465b0b0011b7d2e8b0&mode=admin"
+            height={30}
+            width={30}
+            className="dark:invert"
+          ></Image>
         </Link>
 
         {/* Center Nav - Desktop Only */}

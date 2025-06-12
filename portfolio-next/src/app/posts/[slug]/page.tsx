@@ -27,7 +27,7 @@ async function Post({ params }: { params: Promise<{ slug: string }> }) {
     <div className="flex w-full flex-col px-2 py-4">
       <div>
         <Link href="/posts" className="text-gray-500">
-          <div className="flex items-center gap-2">
+          <div className="fixed flex items-center gap-2">
             <ArrowLeft size={20} />
             Go to all posts
           </div>

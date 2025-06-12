@@ -27,7 +27,7 @@ async function Project({ params }: { params: Promise<{ slug: string }> }) {
     <div className="flex w-full flex-col px-2 py-4">
       <div>
         <Link href="/projects" className="text-gray-500">
-          <div className="flex items-center gap-2">
+          <div className="fixed flex items-center gap-2">
             <ArrowLeft size={20} />
             Go to all projects
           </div>

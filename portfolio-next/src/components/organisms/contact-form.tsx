@@ -85,7 +85,7 @@ function ContactForm() {
 
       <section className="relative mx-auto max-w-xl space-y-6 p-6 text-center">
         <div>
-          <h2 className="title text-3xl font-bold">Let’s talk about your project</h2>
+          <h2 className="title text-3xl font-bold">Let’s Connect</h2>
           <p className="text-muted-foreground text-left">
             I help companies and individuals build out their digital presence.
           </p>
