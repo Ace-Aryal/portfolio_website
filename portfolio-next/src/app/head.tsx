@@ -1,7 +1,7 @@
 export default function Head() {
   return (
     <>
-      <title>Your Site Title</title>
+      <title>Dipesh Aryal Portfolio</title>
       <link rel="icon" href="/favicon.ico" />
       <meta
         name="portfolio website "
