@@ -45,7 +45,7 @@ function VerticalTimeline() {
         'Used Tailwind CSS to design and develop my first personal portfolio website to showcase my journey and projects.',
       link: {
         label: 'View Portfolio',
-        href: 'https://www.aryaldipesh.com.np', // Replace with your actual URL if different
+        href: 'https://ace-aryal.github.io/dipesh_aryal_profile', // Replace with your actual URL if different
       },
     },
     {
