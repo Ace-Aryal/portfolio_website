@@ -61,11 +61,21 @@ export default function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="flex flex-col gap-4 p-6">
-                {navItems.map((item) => (
-                  <Link key={item.href} href={item.href} className="text-sm font-medium">
-                    {item.label}
-                  </Link>
-                ))}
+                {navItems.map((item) => {
+                  const isActive =
+                    item.href === pathname || (pathname.startsWith(item.href) && pathname !== '/')
+                      ? true
+                      : false
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={`${isActive ? 'bg-gray-200 dark:bg-gray-800' : ''} rounded-lg px-2 py-1 text-sm font-medium transition-colors hover:text-blue-700 hover:dark:text-blue-400`}
+                    >
+                      {item.label}
+                    </Link>
+                  )
+                })}
               </SheetContent>
             </Sheet>
           </div>
