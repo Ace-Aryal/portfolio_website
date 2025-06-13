@@ -23,6 +23,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="font-serif text-lg font-bold">
           <Image
+            priority
             alt="logo"
             src="https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684adf0d0008c0cdec22/view?project=68465b0b0011b7d2e8b0&mode=admin"
             height={30}

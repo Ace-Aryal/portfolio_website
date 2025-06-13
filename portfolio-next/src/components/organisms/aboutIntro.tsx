@@ -23,6 +23,7 @@ export default function AboutIntro() {
             src="https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684ab145000ff2199814/view?project=68465b0b0011b7d2e8b0&mode=admin"
             width={175}
             height={175}
+            priority
           />
         </div>
       </div>

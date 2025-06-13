@@ -47,6 +47,7 @@ export default function Intro() {
 
         <div id="image-section">
           <Image
+            priority
             className="rounded-lg grayscale-100 transition-all hover:scale-105 hover:grayscale-25 focus:scale-105 focus:grayscale-25 active:scale-105 active:grayscale-25"
             alt="profile-picture"
             src="https://avatars.githubusercontent.com/u/153974691?v=4"
