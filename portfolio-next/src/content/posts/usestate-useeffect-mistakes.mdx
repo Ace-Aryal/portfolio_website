@@ -1,0 +1,143 @@
+---
+title: 'Common Mistakes with useState and useEffect in React'
+description: 'Learn to avoid frequent pitfalls when using useState and useEffect with practical fixes and patterns.'
+date: '2025-06-13'
+author: Dipesh Aryal
+---
+
+<Image
+  src="https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684acf1900032ad6b806/view?project=68465b0b0011b7d2e8b0&mode=admin"
+  alt="React Hooks Common Mistakes"
+  width={800}
+  height={400}
+/>
+
+React Hooks like `useState` and `useEffect` are powerful—but it's easy to misuse them. Here's a list of common pitfalls and how to fix them effectively.
+
+---
+
+## 🧠 1. Batching State Updates Incorrectly
+
+```jsx
+setCount(count + 1)
+setCount(count + 1) // Not what you expect!
+```
+
+### ✅ Fix: Use Functional Update
+
+```jsx
+setCount((prev) => prev + 1)
+setCount((prev) => prev + 1)
+```
+
+---
+
+## 🔁 2. Conditionally Calling Hooks
+
+```jsx
+if (something) {
+  useEffect(() => {
+    // ❌ Illegal hook call
+  }, [])
+}
+```
+
+### ✅ Fix: Hooks Must Be Called Unconditionally
+
+```jsx
+useEffect(() => {
+  if (something) {
+    // ✅ safe
+  }
+}, [])
+```
+
+---
+
+## 🔧 3. Directly Mutating State Objects
+
+```jsx
+state.user.name = 'New Name'
+setUser(state.user)
+```
+
+### ✅ Fix: Use Spread Operator
+
+```jsx
+setUser((prev) => ({
+  ...prev,
+  name: 'New Name',
+}))
+```
+
+---
+
+## 🧮 4. Derived State in useState
+
+```jsx
+const [fullName, setFullName] = useState(firstName + ' ' + lastName)
+```
+
+### ✅ Fix: Just Compute It
+
+```jsx
+const fullName = `${firstName} ${lastName}`
+```
+
+No need to store derived values in state—compute them from source values directly.
+
+---
+
+## ❌ 5. Component Not Rerendering
+
+Calling a setter like `setCount(5)` when `count` is already `5` won't cause a re-render. But with objects, things behave differently:
+
+```jsx
+setUser({ ...user }) // will trigger rerender if ref changes
+```
+
+To ensure `useEffect` tracks object changes correctly:
+
+```jsx
+useEffect(() => {
+  // do something
+}, [user.id]) // use primitive key inside object
+```
+
+---
+
+## 🛠️ 6. Not Using Custom Hooks
+
+**Utility functions ≠ Custom Hooks**
+
+Custom hooks encapsulate logic using **other hooks** like `useState`, `useEffect`, `useContext`.
+
+### ✅ Example
+
+```jsx
+function useLocalStorage(key, initial) {
+  const [value, setValue] = useState(() => {
+    return localStorage.getItem(key) || initial
+  })
+
+  useEffect(() => {
+    localStorage.setItem(key, value)
+  }, [key, value])
+
+  return [value, setValue]
+}
+```
+
+Now reuse it in any component:
+
+```jsx
+const [theme, setTheme] = useLocalStorage('theme', 'dark')
+```
+
+---
+
+## ✅ Conclusion
+
+Understanding how `useState` and `useEffect` behave helps you write more predictable, optimized components. Avoiding these common mistakes and using patterns like derived state and custom hooks can greatly clean up your code.
+
+Happy coding! 🚀
