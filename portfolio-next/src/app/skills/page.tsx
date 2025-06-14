@@ -3,7 +3,7 @@ import React from 'react'
 
 function SkillsPage() {
   return (
-    <section className="mt-10 flex w-full flex-col items-center justify-center">
+    <section className="my-5 mt-10 flex w-full flex-col items-center justify-center">
       <div id="top" className="w-full">
         <TechStack />
       </div>

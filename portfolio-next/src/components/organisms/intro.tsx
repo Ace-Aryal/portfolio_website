@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Intro() {
   return (
@@ -14,8 +15,8 @@ export default function Intro() {
           </p>
           {/* Social Icons */}
           <div className="mt-1 flex gap-3 text-gray-500 dark:text-gray-400">
-            <a
-              href="https://github.com/aryaldipesh"
+            <Link
+              href="https://github.com/ace-aryal"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -24,9 +25,9 @@ export default function Intro() {
                 size={18}
                 className="transition hover:text-black focus:text-black active:text-black dark:hover:text-white dark:focus:text-white dark:active:text-white"
               />
-            </a>
-            <a
-              href="https://linkedin.com/in/aryaldipesh"
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/dipesh-aryal-612536272/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -35,13 +36,13 @@ export default function Intro() {
                 size={18}
                 className="transition hover:text-blue-600 focus:text-blue-600 active:text-blue-600"
               />
-            </a>
-            <a href="mailto:dipesh@example.com" aria-label="Email">
+            </Link>
+            <Link href="mailto:aryaldipesh404@gmail.com" aria-label="Email">
               <Mail
                 size={18}
                 className="transition hover:text-red-500 focus:text-red-500 active:text-red-500"
               />
-            </a>
+            </Link>
           </div>
         </div>
 
