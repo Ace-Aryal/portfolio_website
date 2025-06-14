@@ -106,6 +106,18 @@ function TechStack() {
         'https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684aced000032284e814/view?project=68465b0b0011b7d2e8b0&mode=admin',
     },
     {
+      title: 'Zod',
+      level: 'Intermediate',
+      image:
+        'https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684d7b30003d0c79aedf/view?project=68465b0b0011b7d2e8b0&mode=admin',
+    },
+    {
+      title: 'Prisma ORM',
+      level: 'Intermediate',
+      image:
+        'https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684d7b5500090a9c604a/view?project=68465b0b0011b7d2e8b0&mode=admin',
+    },
+    {
       title: 'C Language',
       level: 'familiar',
       image:
