@@ -167,3 +167,58 @@
     content: none; /* removes backticks */
   }
 }
+
+.fadeRight {
+  animation: fadeRightA 0.8s ease-out forwards;
+}
+.fadeLeft {
+  animation: fadeLeftA 0.8s ease-out forwards;
+}
+.reveal {
+  animation: revealA 0.6s ease-out forwards;
+}
+.blink {
+  animation: blinkA 0.95s step-start infinite;
+}
+
+@keyframes fadeRightA {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes fadeLeftA {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes revealA {
+  0% {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes blinkA {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: inherit;
+  }
+  100% {
+    color: transparent;
+  }
+}

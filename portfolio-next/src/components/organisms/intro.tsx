@@ -7,7 +7,12 @@ export default function Intro() {
     <div className="grid w-full place-items-center">
       <div className="flex flex-col-reverse items-center justify-center gap-4 sm:flex-row">
         <div className="flex flex-col gap-2" id="paragraph-section">
-          <h1 className="title border-0">Namaste, I{`'`}m Dipesh</h1>
+          <h1 className="title border-0">
+            Namaste, I{`'`}m{' '}
+            <span className="text-blue-500">
+              Dipesh <span className="blink">_</span>
+            </span>
+          </h1>
           <p className="max-w-md text-sm">
             <span className="text-lg font-semibold text-gray-500">|</span> I{`'`}m a passionate
             frontend web developer who enjoys learning new technologies and building clean,

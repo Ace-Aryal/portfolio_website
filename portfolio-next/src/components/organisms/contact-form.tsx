@@ -52,7 +52,7 @@ function ContactForm() {
     }
   }
   return (
-    <section className="relative isolate flex">
+    <section className="reveal relative isolate flex">
       <svg
         className="absolute inset-0 -z-10 h-full w-full [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-zinc-200 dark:stroke-zinc-700"
         aria-hidden="true"

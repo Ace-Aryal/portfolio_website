@@ -131,7 +131,7 @@ function TechStack() {
       <ul className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4">
         {techStackArray.map((techStack) => (
           <li key={techStack.image}>
-            <div className="group aspect-square min-h-48 [perspective:1000px]">
+            <div className="group reveal aspect-square min-h-48 [perspective:1000px]">
               <div className="relative h-full w-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus:[transform:rotateY(180deg)] group-active:[transform:rotateY(180deg)]">
                 {/* Front */}
                 <div className="absolute inset-0 flex items-center justify-center rounded-lg text-white [backface-visibility:hidden]">

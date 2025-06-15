@@ -22,7 +22,7 @@ function Project({
           key={project.slug}
           className="aspect-square min-h-48 w-full rounded-lg border-gray-500 transition-all hover:border-4 focus:border-4 active:border-4"
         >
-          <div className="group relative aspect-square h-full w-full rounded-lg hover:bg-gray-100 focus:bg-gray-100 active:bg-gray-100 hover:dark:bg-gray-800 focus:dark:bg-gray-800 active:dark:bg-gray-800">
+          <div className="reveal group relative aspect-square h-full w-full rounded-lg hover:bg-gray-100 focus:bg-gray-100 active:bg-gray-100 hover:dark:bg-gray-800 focus:dark:bg-gray-800 active:dark:bg-gray-800">
             <div className="absolute h-full w-full group-hover:opacity-25 group-focus:opacity-25 group-active:opacity-25">
               <Image
                 fill

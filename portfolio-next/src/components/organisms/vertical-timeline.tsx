@@ -90,7 +90,7 @@ function VerticalTimeline() {
   ]
 
   return (
-    <div className="flex w-full justify-center px-4">
+    <div className="reveal flex w-full justify-center px-4">
       <h2 className="hidden px-4 font-serif text-lg font-semibold sm:inline-block">Timeline</h2>
       <ol className="relative max-w-3xl border-s border-gray-300 dark:border-gray-700">
         {timelineArray.map((timeline, index) => (

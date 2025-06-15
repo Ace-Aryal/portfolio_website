@@ -12,11 +12,11 @@ export default async function Home() {
   const projects = await getprojects(3)
   return (
     <div className="flex w-full flex-col items-center justify-center">
-      <section className="my-8 max-w-3xl p-4">
+      <section className="fadeRight my-8 max-w-3xl p-4">
         {' '}
         <Intro />
       </section>
-      <section className="mt-10 flex w-full max-w-3xl flex-col px-4 py-6">
+      <section className="fadeLeft mt-10 flex w-full max-w-3xl flex-col px-4 py-6">
         <h2 className="title px-1">Recent Projects</h2>
         <Project gridCols="md:grid-cols-3" projects={projects} />
         <Link className="px-4 text-sm text-gray-500 underline" href="/projects">
