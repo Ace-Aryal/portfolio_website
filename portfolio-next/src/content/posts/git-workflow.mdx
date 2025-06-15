@@ -1,0 +1,234 @@
+---
+title: 'Git Workflow for Junior Developers'
+description: 'A detailed step-by-step Git workflow guide with best practices, from cloning to handling PR reviews and merge conflicts.'
+date: '2025-06-14'
+image: 'https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png'
+tags: ['git', 'workflow', 'junior dev', 'pull request', 'best practices']
+---
+
+import Image from 'next/image'
+
+<Image
+  src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+  alt="Git Logo"
+  width={90}
+  height={90}
+  className="my-4"
+/>
+
+# Git Workflow for Junior Developers 🚀
+
+As I was learning git and github I made some notes and created this guide from the notes so that if anyone needs it they can refer to it
+
+This guide outlines the **real-world Git workflow** you’ll follow as a junior dev working in teams. It starts from **cloning a repo**, and covers day-to-day practices, including **pulling**, **rebasing**, **committing**, **handling rejected pull requests**, and **avoiding merge conflicts**.
+
+---
+
+## 🧭 Step 1: Clone the Project
+
+```bash
+git clone https://github.com/org/project-name.git
+cd project-name
+
+```
+
+Here you go — a **single `.mdx` file** that includes everything: cloning, syncing, rebasing, rejected PRs, commit practices, and cleanup — all with clear headings and markdown formatting suitable for your portfolio or future reference.
+
+---
+
+````mdx
+---
+title: 'Git Workflow for Junior Developers'
+description: 'A detailed step-by-step Git workflow guide with best practices, from cloning to handling PR reviews and merge conflicts.'
+date: '2025-06-14'
+image: 'https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png'
+tags: ['git', 'workflow', 'junior dev', 'pull request', 'best practices']
+---
+
+import Image from 'next/image'
+
+<Image
+  src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+  alt="Git Logo"
+  width={90}
+  height={90}
+  className="my-4"
+/>
+
+# Git Workflow for Junior Developers 🚀
+
+This guide outlines the **real-world Git workflow** you’ll follow as a junior dev working in teams. It starts from **cloning a repo**, and covers day-to-day practices, including **pulling**, **rebasing**, **committing**, **handling rejected pull requests**, and **avoiding merge conflicts**.
+
+---
+
+## 🧭 Step 1: Clone the Project
+
+```bash
+git clone https://github.com/org/project-name.git
+cd project-name
+```
+````
+
+> 🔍 Make sure you're in the correct working directory (`cd project-name`).
+
+---
+
+## 🌱 Step 2: Start From a Fresh `main` Branch
+
+```bash
+git checkout main
+git pull origin main
+```
+
+> ✅ **Always pull the latest `main` before starting new work.** This avoids surprises later.
+
+---
+
+## 🌿 Step 3: Create a Feature Branch
+
+```bash
+git checkout -b feat/user-login
+```
+
+> ✍️ **Naming Convention:**
+
+- `feat/` → new feature (`feat/navbar`)
+- `fix/` → bug fix (`fix/form-validation`)
+- `refactor/` → cleanups (`refactor/home-component`)
+- `chore/` → config or minor updates
+
+---
+
+## 💻 Step 4: Work Locally & Commit Often
+
+```bash
+git add .
+git commit -m "Add login form UI with basic validation"
+```
+
+### ✅ Commit Best Practices
+
+- Write clear, **atomic** commits (small, focused)
+- Use **present tense**: "Add X", not "Added X"
+- Avoid meaningless messages: `Update`, `Fix stuff`
+
+> 📌 **Commit frequency**: After every small, testable milestone — even if it’s just styling or a hook.
+
+---
+
+## 🔁 Step 5: Rebase Before You Push
+
+Before pushing, rebase your feature branch with the latest `main` to prevent conflicts and keep a clean history.
+
+```bash
+git pull origin main --rebase
+```
+
+> 🔄 Why not `merge`? Rebase avoids cluttered commit history full of merge commits.
+
+---
+
+## 🚀 Step 6: Push to Remote
+
+```bash
+git push origin feat/user-login
+```
+
+Then go to GitHub/GitLab and open a Pull Request.
+
+---
+
+## 📋 Step 7: Open a Pull Request (PR)
+
+1. Go to the repository
+2. Compare your branch with `main`
+3. Add a **clear title** and **description**
+4. Tag reviewers (your team lead or senior dev)
+
+> ✅ Describe what the PR does, and how to test it if needed.
+
+---
+
+## ❌ Step 8: Rejected PR? Handle Gracefully
+
+If your PR is **rejected or needs changes**:
+
+1. Make the requested edits
+2. Commit again
+3. Push again — the PR will **update automatically**
+
+```bash
+git add .
+git commit -m "Fix: change form validation as per review"
+git push
+```
+
+> 🔁 Don’t take PR reviews personally — they’re about improving code, not criticizing you.
+
+---
+
+## 🔀 Step 9: Merge & Cleanup
+
+Once approved and merged (by you or a team member):
+
+```bash
+git checkout main
+git pull origin main
+git branch -d feat/user-login
+git push origin --delete feat/user-login
+```
+
+> 🧹 Clean up local and remote branches to keep the repo tidy.
+
+---
+
+## ⚠️ Common Merge Conflict Triggers
+
+- You and another dev edited the **same line** in a file.
+- You both added different packages at the same time (causing `package-lock.json` conflicts).
+- You didn’t pull latest changes before pushing.
+- You auto-formatted files differently (Prettier, ESLint).
+
+### ✅ Conflict Tips
+
+- Use `git status` to see which files are conflicted
+- Resolve manually or using VS Code
+- After resolving:
+
+```bash
+git add .
+git rebase --continue
+```
+
+---
+
+## 🧠 Git Best Practices Summary
+
+| Best Practice                       | Why It Matters                   |
+| ----------------------------------- | -------------------------------- |
+| Start every task from latest `main` | Reduces merge conflicts          |
+| Create feature branches per task    | Keeps work isolated, reviewable  |
+| Commit small and meaningful chunks  | Easier to understand and debug   |
+| Rebase before push                  | Maintains clean, linear history  |
+| Push early and get feedback         | Prevents large, unreviewable PRs |
+| Handle rejected PRs constructively  | It's part of the dev process     |
+| Clean up branches after merge       | Keeps your Git clean             |
+
+---
+
+## 🛠 Tools That Help
+
+- **VS Code Git UI** — for staging, commits, conflict resolution
+- **GitLens extension** — shows who changed what
+- **GitHub Desktop / GitKraken** — visual Git clients (optional)
+- **Husky + Lint-Staged** — run Prettier/linter before commits
+
+---
+
+## 🏁 Final Thoughts
+
+Learning Git deeply takes time, but this workflow will help you:
+
+- Collaborate effectively
+- Avoid conflicts and messy history
+- Grow faster as a team-oriented developer
