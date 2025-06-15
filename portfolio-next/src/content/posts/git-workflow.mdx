@@ -22,8 +22,6 @@ As I was learning git and github I made some notes and created this guide from t
 
 This guide outlines the **real-world Git workflow** you’ll follow as a junior dev working in teams. It starts from **cloning a repo**, and covers day-to-day practices, including **pulling**, **rebasing**, **committing**, **handling rejected pull requests**, and **avoiding merge conflicts**.
 
----
-
 ## 🧭 Step 1: Clone the Project
 
 ```bash
@@ -35,7 +33,7 @@ cd project-name
 
 > 🔍 Make sure you're in the correct working directory (`cd project-name`).
 
----
+
 
 ## 🌱 Step 2: Start From a Fresh `main` Branch
 
@@ -46,7 +44,7 @@ git pull origin main
 
 > ✅ **Always pull the latest `main` before starting new work.** This avoids surprises later.
 
----
+
 
 ## 🌿 Step 3: Create a Feature Branch
 
@@ -61,7 +59,7 @@ git checkout -b feat/user-login
 - `refactor/` → cleanups (`refactor/home-component`)
 - `chore/` → config or minor updates
 
----
+
 
 ## 💻 Step 4: Work Locally & Commit Often
 
@@ -78,7 +76,6 @@ git commit -m "Add login form UI with basic validation"
 
 > 📌 **Commit frequency**: After every small, testable milestone — even if it’s just styling or a hook.
 
----
 
 ## 🔁 Step 5: Rebase Before You Push
 
@@ -90,7 +87,7 @@ git pull origin main --rebase
 
 > 🔄 Why not `merge`? Rebase avoids cluttered commit history full of merge commits.
 
----
+
 
 ## 🚀 Step 6: Push to Remote
 
@@ -100,7 +97,7 @@ git push origin feat/user-login
 
 Then go to GitHub/GitLab and open a Pull Request.
 
----
+
 
 ## 📋 Step 7: Open a Pull Request (PR)
 
@@ -111,7 +108,7 @@ Then go to GitHub/GitLab and open a Pull Request.
 
 > ✅ Describe what the PR does, and how to test it if needed.
 
----
+
 
 ## ❌ Step 8: Rejected PR? Handle Gracefully
 
@@ -129,7 +126,7 @@ git push
 
 > 🔁 Don’t take PR reviews personally — they’re about improving code, not criticizing you.
 
----
+
 
 ## 🔀 Step 9: Merge & Cleanup
 
@@ -144,7 +141,7 @@ git push origin --delete feat/user-login
 
 > 🧹 Clean up local and remote branches to keep the repo tidy.
 
----
+
 
 ## ⚠️ Common Merge Conflict Triggers
 
@@ -164,7 +161,7 @@ git add .
 git rebase --continue
 ```
 
----
+
 
 ## 🧠 Git Best Practices Summary
 
@@ -178,7 +175,7 @@ git rebase --continue
 | Handle rejected PRs constructively  | It's part of the dev process     |
 | Clean up branches after merge       | Keeps your Git clean             |
 
----
+
 
 ## 🛠 Tools That Help
 
@@ -187,7 +184,7 @@ git rebase --continue
 - **GitHub Desktop / GitKraken** — visual Git clients (optional)
 - **Husky + Lint-Staged** — run Prettier/linter before commits
 
----
+
 
 ## 🏁 Final Thoughts
 
