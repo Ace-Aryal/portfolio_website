@@ -222,3 +222,8 @@
     color: transparent;
   }
 }
+/* hides the arrow of datalist */
+input::-webkit-calendar-picker-indicator {
+  display: none !important;
+  -webkit-appearance: none;
+}

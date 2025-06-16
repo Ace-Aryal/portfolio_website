@@ -1,3 +1,4 @@
+'use xclient'
 import { formatDate } from '@/lib/formatDate'
 import { PostMetadata } from '@/lib/posts'
 import Link from 'next/link'
