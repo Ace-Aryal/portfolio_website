@@ -10,6 +10,7 @@ import { components } from '@/components/tempelates/mdx-content'
 export async function generateStaticParams() {
   const posts = await getPosts()
   const slugs = posts.map((post) => {
+    console.log('slug:', post.slug)
     return { slug: post.slug }
   })
   return slugs
