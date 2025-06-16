@@ -1,0 +1,307 @@
+---
+
+title: "Common Next.js Mistakes Beginners (Like Me) Make"
+description: "A deep dive into real-world mistakes I made when learning Next.js — and how to fix them."
+date: "2025-06-14"
+author : "Dipesh Aryal"
+tags: \["nextjs", "webdev", "beginners", "mistakes", "react"]
+image: "[https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format\&fit=crop\&w=1200\&q=80](https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80)"
+
+---
+
+> These mistakes slowed me down when learning Next.js. Here's how to avoid them and build cleaner, faster apps.
+
+---
+
+## ⚛️ Rendering Mistakes
+
+### 1. Using `"use client"` too high in the tree
+
+This makes **all child components** client components — even those that don't need it, which ruins the benefit of server components.
+
+```tsx
+// 🚫 Bad: All children become client components
+'use client'
+
+export default function Layout({ children }) {
+  return <div>{children}</div>
+}
+```
+
+✅ **Fix:** Only use `"use client"` in components that actually need it (e.g., interactive components using state, effects).
+
+```tsx
+// ✅ Good: Only the component that needs interactivity is client
+'use client'
+
+export default function Toggle() {
+  const [on, setOn] = useState(false)
+  return <button onClick={() => setOn(!on)}>{on ? 'ON' : 'OFF'}</button>
+}
+```
+
+---
+
+### 2. Not refactoring client components
+
+A common habit is dumping `"use client"` on top-level files. Instead:
+
+- Extract the logic into small client components
+- Compose them in server components using props or `children`
+
+```tsx
+// ServerComponent.tsx
+export default function Wrapper({ children }) {
+  return <div className="p-4">{children}</div>
+}
+
+// ClientComponent.tsx
+;('use client')
+
+export default function Counter() {
+  const [count, setCount] = useState(0)
+  return <button onClick={() => setCount((c) => c + 1)}>{count}</button>
+}
+```
+
+---
+
+### 3. Import location matters
+
+You **can** use client components inside server components. Just **don’t import** them directly. Instead:
+
+✅ Pass them as `children` or load with dynamic imports.
+
+---
+
+### 4. Using client-side state libraries in server components
+
+Libraries like `Redux`, `Zustand`, or `Context` are **client-only**.
+
+✅ Use Next.js tools like `searchParams`, `cookies`, or directly mutate DB state from the server.
+
+---
+
+### 5. Misunderstanding `"use server"`
+
+This does **not** make a component a server component. It **marks a function as a Server Action**.
+
+```ts
+'use server'
+
+export async function saveForm(data) {
+  // DB logic
+}
+```
+
+---
+
+### 6. Leaking sensitive data from RSC to RCC
+
+Passing secrets like tokens or credentials as props exposes them to the client.
+
+✅ Keep sensitive logic and data strictly in the server.
+
+---
+
+### 7. Using `localStorage` directly in components
+
+Even client components run once on the server. So:
+
+```tsx
+// 🚫 This breaks:
+const theme = localStorage.getItem('theme')
+```
+
+✅ Use `useEffect()`:
+
+```tsx
+useEffect(() => {
+  const theme = localStorage.getItem('theme')
+}, [])
+```
+
+---
+
+### 8. Hydration mismatch
+
+Server HTML and client HTML must match.
+
+✅ Prevent by delaying state-based rendering:
+
+```tsx
+const [mounted, setMounted] = useState(false)
+useEffect(() => setMounted(true), [])
+if (!mounted) return null
+```
+
+✅ Or use:
+
+```tsx
+<Component suppressHydrationWarning />
+```
+
+---
+
+### 9. 3rd party libraries using browser APIs
+
+Libraries that use `document`, `window`, etc., will break in SSR.
+
+✅ Use dynamic imports with `ssr: false`:
+
+```tsx
+const RichEditor = dynamic(() => import('./RichEditor'), { ssr: false })
+```
+
+---
+
+## 🖥️ Server Component Mistakes
+
+### 10. Still using route handlers for everything
+
+You don't need `/api/route` for simple form submissions.
+
+✅ Use Server Actions where possible.
+
+---
+
+### 11. Lifting state unnecessarily
+
+Next.js caches fetches per request. Fetch in multiple places **without prop drilling**.
+
+---
+
+### 12. Waterfall fetching
+
+Avoid sequential fetching of unrelated data.
+
+```ts
+// ✅ Use Promise.all
+const [posts, users] = await Promise.all([getPosts(), getUsers()])
+```
+
+---
+
+### 13. Nested waterfall
+
+Avoid `await` in deep components. Fetch higher and pass down as props.
+
+---
+
+### 14. Data not updating after server action
+
+✅ Use:
+
+```ts
+revalidatePath('/dashboard')
+```
+
+---
+
+### 15. Submitting forms to RSCs
+
+✅ Use server actions with `<form action={addTodo}>`.
+
+---
+
+### 16. Using server actions in RCC
+
+✅ Possible, but **type arguments as `unknown`** and validate manually.
+
+---
+
+### 17. Not validating data
+
+Always validate on the server too.
+
+✅ Use Zod, Yup, or custom checks.
+
+---
+
+### 18. Using `"use server"` incorrectly
+
+✅ If you're trying to force server-side code, use `server-only` package instead.
+
+---
+
+### 19. Confusing `params` and `searchParams`
+
+- `params`: route segment like `/user/[id]`
+- `searchParams`: query string like `?tab=profile`
+
+---
+
+### 20. Not using searchParams for state
+
+URL-based state (filters, tabs) is shareable and cached.
+
+---
+
+### 21. No loading/error UI
+
+✅ Use `loading.tsx`, `error.tsx`, and `<Suspense fallback={...}>`.
+
+---
+
+### 22–24. Suspense misuse
+
+- Be granular.
+- Use `key` for dynamic fallback rendering.
+
+```tsx
+<Suspense key={slug} fallback={<Skeleton />}>
+  <Post slug={slug} />
+</Suspense>
+```
+
+---
+
+### 25. Accidentally forcing dynamic rendering
+
+Using cookies, `headers()`, or dynamic imports in shared layouts like navbars or footers can make entire app dynamic.
+
+✅ Use `cache: 'force-cache'` where possible.
+
+---
+
+### 26. Hardcoding secrets
+
+✅ Use environment variables and `server-only` package to protect secrets.
+
+```ts
+import 'server-only'
+const token = process.env.PRIVATE_KEY
+```
+
+---
+
+### 27. Mixing server/client logic
+
+✅ Keep folders like:
+
+```
+/utils
+  /client/useLocalStorage.ts
+  /server/db.ts
+```
+
+---
+
+### 28. Using `redirect()` inside `try-catch`
+
+✅ Call `redirect()` only **after** your logic. Don't wrap it inside `try/catch`, since it throws internally.
+
+```ts
+await doSomething()
+redirect('/success') // not in try
+```
+
+---
+
+## 🧠 Final Thoughts
+
+Mistakes are part of learning. Documenting them helps you (and others) grow.
+
+If you liked this, bookmark it — or better, turn it into your own checklist while building!
+
+Let me know if you'd like a printable PDF or shareable checklist version ✌️
