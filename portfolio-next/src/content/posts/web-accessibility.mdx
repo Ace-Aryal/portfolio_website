@@ -1,0 +1,82 @@
+---
+title: 'Web Accessibility'
+description: 'Building websites for everyone — including users with visual, hearing, motor, or cognitive impairments.'
+date: '2025-06-14'
+tags: ['a11y', 'accessibility', 'inclusive web', 'best practices']
+image: 'https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684fd77a00268175c1a2/view?project=68465b0b0011b7d2e8b0&mode=admin'
+---
+
+# Web Accessibility
+
+Web accessibility is the practice of making your website usable for **everyone** — from visually impaired users to older adults, users with motor or hearing limitations, and even those in temporary or situational constraints (like using a phone in bright sunlight or with one hand).
+
+Making your site accessible isn’t just a nice-to-have — it’s a **must-have** for real-world usability, ethical design, and even legal compliance.
+
+<Image
+  src="https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684fd77a00268175c1a2/view?project=68465b0b0011b7d2e8b0&mode=admin"
+  alt="React Hooks Common Mistakes"
+  width={400}
+  height={300}
+  className="object-cover"
+/>
+
+## 1. 👁️ Visual Accessibility
+
+We must support users with partial vision, color blindness, or age-related difficulties.
+
+- **Label your inputs** clearly. If you don’t want visible labels, use `aria-label`.
+- For **toasts and alerts**, use `aria-live="polite"` or `aria-live="assertive"` so screen readers announce them.
+- **Contrast ratio** should be **at least 4.5:1**. But don’t go overboard — high contrast shouldn't strain users' eyes.
+- Use **DevTools > Rendering > Emulate vision deficiencies** to preview issues.
+- Add `alt` attributes to every image — describe the image concisely and informatively.
+- Use **semantic HTML** (`<main>`, `<header>`, `<section>`, etc.) so screen readers interpret structure correctly.
+- Avoid vague link or button text like "Click here" — use descriptive labels like `"Download Invoice"`, `"Submit Feedback"`.
+- Use `em` or `rem` units for font sizes and spacing — they scale better with system font settings.
+- If your website has a **contact feature**, offer **both call and text** options.
+- Consider adding **light/dark mode** for comfort and contrast flexibility.
+- **Test with a screen reader** (NVDA, VoiceOver) or, even better, with users who rely on them.
+
+## 2. ⌨️ Keyboard Accessibility
+
+Many users navigate entirely via keyboard, especially with screen readers or physical limitations.
+
+- Semantic HTML makes most things automatically keyboard-accessible.
+- Use `tabIndex="0"` to make a scrollable container focusable.
+- Use `tabIndex="-1"` to make an element programmatically focusable but skip it in tab order.
+- Ensure **all functionality is usable without a mouse** — no hover-only menus or actions.
+- Add a **"Skip to main content"** link for users navigating via Tab through repetitive nav.
+
+## 3. 🔈 Hearing Accessibility
+
+For users with hearing difficulties, ensure all audio content is supported with:
+
+- **Captions** for videos
+- **Timestamps** for audio summaries
+- **Transcript/Description areas** for video and audio content
+
+## 4. 🖐️ Motor Accessibility
+
+Help users with tremors, limited movement, or assistive devices:
+
+- **Space clickable elements** far enough apart to avoid accidental taps.
+- Ensure **buttons are large** enough to interact with comfortably.
+- **Avoid timers** or auto-redirects for critical tasks (like form submissions), as not everyone can act quickly.
+
+## 5. 📱 General Accessibility Tips
+
+- If your website functions like a search engine or dashboard, use the `autofocus` attribute on the primary input.
+- Make your site **mobile responsive** — it's not just for convenience, it's an accessibility issue for many.
+
+## 🛠️ Bonus: Audit Accessibility
+
+Use **Chrome DevTools > Lighthouse > Accessibility** to:
+
+- Get accessibility scores
+- Detect missing ARIA labels
+- Spot poor contrast or keyboard traps
+
+## 🎯 Final Thought
+
+Accessibility isn’t a one-time task — it’s a **design mindset**. The more inclusive your UI, the better your site becomes for everyone.
+
+Start small, test often, and always **design for the edge cases** — because for real users, they’re not edge cases at all.
