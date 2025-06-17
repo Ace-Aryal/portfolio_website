@@ -4,8 +4,11 @@ import React from 'react'
 
 function AboutPage() {
   return (
-    <section className="mt-10 w-full">
-      <AboutIntro />
+    <section className="w-ful l mt-24">
+      <div className="mb-30">
+        {' '}
+        <AboutIntro />
+      </div>
 
       <hr className="mt-8" />
       <VerticalTimeline />

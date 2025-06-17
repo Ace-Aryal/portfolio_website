@@ -1,6 +1,6 @@
 import React from 'react'
 import { getprojects } from '@/lib/project'
-import Project from '@/components/molecules/project'
+import Project from '@/components/organisms/project'
 
 async function AllProjectsPage() {
   const projects = await getprojects() // just like fetching data

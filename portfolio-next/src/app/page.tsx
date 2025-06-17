@@ -1,7 +1,7 @@
 // import Image from 'next/image'
 
 import Post from '@/components/molecules/post'
-import Project from '@/components/molecules/project'
+import Project from '@/components/organisms/project'
 import Intro from '@/components/organisms/intro'
 import { getPosts } from '@/lib/posts'
 import { getprojects } from '@/lib/project'
@@ -12,7 +12,7 @@ export default async function Home() {
   const projects = await getprojects(3)
   return (
     <div className="flex w-full flex-col items-center justify-center">
-      <section className="fadeRight my-8 max-w-3xl p-4">
+      <section className="fadeRight my-16 max-w-3xl p-4">
         {' '}
         <Intro />
       </section>

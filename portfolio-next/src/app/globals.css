@@ -227,3 +227,21 @@ input::-webkit-calendar-picker-indicator {
   display: none !important;
   -webkit-appearance: none;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3b82f6; /* purple-400 */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #60a5fa; /* purple-600 */
+}

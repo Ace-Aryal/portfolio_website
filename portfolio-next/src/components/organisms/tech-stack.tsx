@@ -1,8 +1,13 @@
-import Image from 'next/image'
 import React from 'react'
+import TechStackItem from '../molecules/tech-stack-item'
+export type TTechStack = {
+  title: string
+  level: string
+  image: string
+}
 
 function TechStack() {
-  const techStackArray = [
+  const techStackArray: TTechStack[] = [
     {
       title: 'HTML',
       level: 'expert',
@@ -128,36 +133,9 @@ function TechStack() {
   return (
     <div className="flex w-full flex-col items-center justify-center">
       <h2 className="title w mb-5 text-left">Tech Stack</h2>
-      <ul className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4">
-        {techStackArray.map((techStack) => (
-          <li key={techStack.image}>
-            <div className="group reveal aspect-square min-h-48 [perspective:1000px]">
-              <div className="relative h-full w-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus:[transform:rotateY(180deg)] group-active:[transform:rotateY(180deg)]">
-                {/* Front */}
-                <div className="absolute inset-0 flex items-center justify-center rounded-lg text-white [backface-visibility:hidden]">
-                  <Image
-                    width={150}
-                    height={150}
-                    src={techStack.image}
-                    alt={techStack.title}
-                    className={`rounded-lg object-contain ${techStack.title.toLowerCase().replaceAll(' ', '') === 'next.js' || techStack.title.toLowerCase().replaceAll(' ', '') === 'shadcnui' ? 'dark:invert' : ''}`}
-                  ></Image>
-                </div>
-
-                {/* Back */}
-                <div className="absolute inset-0 flex [transform:rotateY(180deg)] items-center justify-center rounded-lg bg-gray-200 text-white [backface-visibility:hidden] dark:bg-zinc-800">
-                  <div className="flex flex-col p-2">
-                    <h3 className="font-serif text-3xl font-semibold text-zinc-700 dark:text-zinc-200">
-                      {techStack.title}
-                    </h3>
-                    <span className="text-lg text-gray-500 dark:text-gray-400">
-                      level: {techStack.level}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
+      <ul className="grid grid-cols-2 gap-10 sm:grid-cols-4 md:grid-cols-6">
+        {techStackArray.map((techStack, index) => (
+          <TechStackItem index={index} techStack={techStack} key={techStack.image} />
         ))}
       </ul>
     </div>
