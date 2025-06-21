@@ -64,6 +64,10 @@ function VerticalTimeline() {
       title: 'Started Learning React',
       summary:
         'Began learning React to build dynamic, component-based user interfaces with reusable logic.',
+      link: {
+        label: 'View Xpenso App',
+        href: 'https://expense-tracker-app-theta-one.vercel.app',
+      },
     },
     {
       date: 'January – May 2025',
@@ -71,8 +75,8 @@ function VerticalTimeline() {
       summary:
         'Learned advanced React concepts, state management with Redux Toolkit, and backend integration with Appwrite. Built multiple full-stack projects.',
       link: {
-        label: 'View Xpenso App',
-        href: 'https://expense-tracker-app-theta-one.vercel.app',
+        label: 'View School Mangement App',
+        href: 'https://ace-school.vercel.app/',
       },
     },
     {
