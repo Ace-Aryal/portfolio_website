@@ -16,7 +16,10 @@ export default function Intro() {
           <p className="max-w-md text-sm">
             <span className="text-lg font-semibold text-gray-500">|</span> I{`'`}m a passionate
             frontend web developer who enjoys learning new technologies and building clean,
-            functional, and user-friendly web applications
+            functional, and user-friendly web applications with{' '}
+            <code className="bg-red-400">
+              <Link href="https://create.t3.gg/">T3 Stack</Link>
+            </code>{' '}
           </p>
           {/* Social Icons */}
           <div className="mt-1 flex gap-3 text-gray-500 dark:text-gray-400">

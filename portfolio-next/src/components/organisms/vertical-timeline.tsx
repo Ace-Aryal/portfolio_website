@@ -81,15 +81,19 @@ function VerticalTimeline() {
     },
     {
       date: 'June 2025 – Present',
-      title: 'Diving Into Next.js with TypeScript',
-      summary:
-        'Currently learning production-grade web development using Next.js and TypeScript to build scalable full-stack applications.',
+      title: 'Diving Into Next.js with T3 stack',
+      summary: `Currently learning production-grade web development using Next.js, TypeScript, Auth and database providers
+         (Clerk, Kinde, Vercel databases), ORMs (Drizzle, Prisma) and more to build scalable full-stack applications.`,
+      link: {
+        label: 'View Ace Gallery',
+        href: 'https://ace-gallary.vercel.app/',
+      },
     },
     {
       date: 'Upcoming',
       title: 'Looking Ahead',
       summary:
-        'Excited to work on real-world projects, contribute to open source, and continue growing as a full-stack developer.',
+        'Excited to work on real-world projects by joining new teams,  contribute to open source, and continue growing as a full-stack developer.',
     },
   ]
 
