@@ -28,7 +28,7 @@ function TechStack() {
     },
     {
       title: 'TypeScript',
-      level: 'beginner',
+      level: 'faimiliar',
       image:
         'https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684ad98d00152804d9e3/view?project=68465b0b0011b7d2e8b0&mode=admin',
     },
@@ -40,7 +40,7 @@ function TechStack() {
     },
     {
       title: 'Next.js',
-      level: 'familiar',
+      level: 'intermediate',
       image:
         'https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684ad97200193f7ff6f3/view?project=68465b0b0011b7d2e8b0&mode=admin',
     },
@@ -82,7 +82,7 @@ function TechStack() {
     },
     {
       title: 'Zustand',
-      level: 'beginner',
+      level: 'familiar',
       image:
         'https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684ad9620029bb8f4ef2/view?project=68465b0b0011b7d2e8b0&mode=admin',
     }, // Replace with actual image if needed
@@ -118,15 +118,9 @@ function TechStack() {
     },
     {
       title: 'Prisma ORM',
-      level: 'Intermediate',
-      image:
-        'https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684d7b5500090a9c604a/view?project=68465b0b0011b7d2e8b0&mode=admin',
-    },
-    {
-      title: 'C Language',
       level: 'familiar',
       image:
-        'https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684acf3e002a1d81c131/view?project=68465b0b0011b7d2e8b0&mode=admin',
+        'https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/684d7b5500090a9c604a/view?project=68465b0b0011b7d2e8b0&mode=admin',
     },
   ]
 
