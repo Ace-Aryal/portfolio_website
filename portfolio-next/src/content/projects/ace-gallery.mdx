@@ -1,0 +1,38 @@
+---
+title: 'Ace Gallery'
+image: 'https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/686783fc0019ed1c6ad0/view?project=68465b0b0011b7d2e8b0&mode=admin'
+description: 'A modern, type-safe gallery web app built on the T3 stack with robust auth, analytics, and advanced UX.'
+techsUsed: 'Next.js, TypeScript, Tailwind, Drizzle ORM, PostgreSQL, Clerk, Upstash, PostHog, Sentry'
+date: '2025-07-04'
+---
+
+<Image
+  src="https://fra.cloud.appwrite.io/v1/storage/buckets/questions-attachment/files/686783fc0019ed1c6ad0/view?project=68465b0b0011b7d2e8b0&mode=admin"
+  alt="Ace Gallery"
+  width={1200}
+  height={400}
+  className="aspect-video rounded-lg"
+/>
+
+## Overview
+
+This was my first truly production-grade app built with the T3 stack. Ace Gallery is a multi-page gallery application with full type safety, secure authentication, and modern user experience patterns. It leverages database insights and performance optimization strategies typical of real-world SaaS.
+
+## Approach
+
+I used Next.js and TypeScript for a fully type-safe stack, Drizzle ORM with PostgreSQL for structured database operations, and Clerk for secure user authentication. Advanced layouts were implemented using Next.js intercepting and parallel routes to create stateful modals that maintain context across URL changes. File uploads are handled via UploadThing with toast notifications covering loading, success, and error states. The app uses Upstash for rate limiting, PostHog for detailed user analytics, and Sentry for error tracking — all deployed to Vercel’s edge functions in Singapore for optimized latency. This project gave me hands-on experience with deploying, monitoring, and securing a complete app end-to-end.
+
+<div className="mt-6 flex gap-4">
+  <Link
+    href="https://github.com/Ace-Aryal/Ace-Gallery"
+    className="border-input bg-background active:bg-accent active:text-accent-foreground focus:bg-accent focus:text-accent-foreground hover:bg-accent hover:text-accent-foreground inline-flex items-center rounded-md border px-2 py-1 text-sm font-medium shadow-sm transition-colors"
+  >
+    <span>View Source Code</span>
+  </Link>
+  <Link
+    href="https://ace-gallery.vercel.app/"
+    className="bg-primary text-primary-foreground active:bg-primary/90 focus:bg-primary/90 hover:bg-primary/90 inline-flex h-8 items-center rounded-md px-2 py-1 text-sm font-medium shadow"
+  >
+    <span>Live Demo</span>
+  </Link>
+</div>
