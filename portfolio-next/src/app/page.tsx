@@ -1,7 +1,7 @@
 export default function SimplePortfolio() {
   return (
 <div className="bg-white w-full">
-    <main className="prose mx-auto max-w-7xl p-2">
+    <main className="prose mx-auto max-w-6xl p-2">
       {/* ABOUT */}
       <h1>Dipesh Aryal</h1>
       <p>
@@ -28,7 +28,7 @@ export default function SimplePortfolio() {
 
         <li>
           <strong>Jhyaap Station</strong> –{' '}
-          <a href="https://jhyaapstation.com.np" target="_blank">
+          <a href="https://jhyaapstation.com" target="_blank">
             jhyaapstation.com.np
           </a>{' '}
           – Mini e-commerce (liquor sellers)
