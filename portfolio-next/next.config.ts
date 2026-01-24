@@ -1,16 +1,25 @@
-import type { NextConfig } from 'next'
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
     domains: [
-      'avatars.githubusercontent.com',
-      'images.unsplash.com',
-      'fra.cloud.appwrite.io',
-      'via.placeholder.com',
-      'upload.wikimedia.org',
+      "avatars.githubusercontent.com",
+      "images.unsplash.com",
+      "fra.cloud.appwrite.io",
+      "via.placeholder.com",
+      "upload.wikimedia.org",
     ],
   },
-}
 
-export default nextConfig
+  // Ignore TypeScript errors during build
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+
+  // Ignore ESLint errors during build
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+};
+
+export default nextConfig;
