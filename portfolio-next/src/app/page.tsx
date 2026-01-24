@@ -29,7 +29,7 @@ export default function SimplePortfolio() {
         <li>
           <strong>Jhyaap Station</strong> –{' '}
           <a href="https://jhyaapstation.com" target="_blank">
-            jhyaapstation.com.np
+            jhyaapstation.com
           </a>{' '}
           – Mini e-commerce (liquor sellers)
           <br />
