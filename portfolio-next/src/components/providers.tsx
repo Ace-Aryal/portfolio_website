@@ -13,5 +13,5 @@ export default function Providers({ children }: { children: React.ReactNode }) {
 
 function ToastProvider() {
   const { resolvedTheme } = useTheme()
-  return <Toaster position="top-right" theme={resolvedTheme === 'dark' ? 'dark' : 'light'} />
+  return <Toaster position="top-right" theme={resolvedTheme === 'dark' ? 'light' : 'light'} />
 }
