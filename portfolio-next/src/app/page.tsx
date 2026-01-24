@@ -1,5 +1,6 @@
 export default function SimplePortfolio() {
   return (
+<div className="bg-white w-full">
     <main className="prose mx-auto max-w-7xl p-2">
       {/* ABOUT */}
       <h1>Dipesh Aryal</h1>
@@ -139,5 +140,6 @@ export default function SimplePortfolio() {
         <a href="/posts">Click here to see my posts</a>
       </p>
     </main>
+</div>
   )
 }
