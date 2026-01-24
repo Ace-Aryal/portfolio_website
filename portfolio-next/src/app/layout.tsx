@@ -80,9 +80,9 @@ export default function RootLayout({
         <Providers>
           <div className="flex w-full flex-col items-center">
             <div className="container flex min-h-screen flex-col">
-              <Header />
+              
               <main className="flex grow flex-col"> {children}</main>
-              <Footer />
+              
             </div>
           </div>
         </Providers>
