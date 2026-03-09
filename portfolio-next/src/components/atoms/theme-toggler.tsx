@@ -19,7 +19,7 @@ function ThemeToggler() {
       variant="ghost"
       onClick={() => {
         const currentTheme = resolvedTheme || theme
-        setTheme(currentTheme === 'dark' ? 'light' : 'dark')
+        setTheme(currentTheme === 'dark' ? 'light' : '')
       }}
     >
       {resolvedTheme === 'dark' ? <SunIcon /> : <MoonIcon />}

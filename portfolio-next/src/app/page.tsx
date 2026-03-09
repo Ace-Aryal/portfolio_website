@@ -5,8 +5,7 @@ export default function SimplePortfolio() {
       {/* ABOUT */}
       <h1>Dipesh Aryal</h1>
       <p>
-        Dipesh Aryal, Full stack developer, building real life projects at Mayamatrix Technologies
-        using modern tech stack hybrid of T3 stack and MERN stack.
+        I am full stack developer with real life applications development experience. I have shipped multiple products in production and have been working in the industry for 8+ months. I am passionate about building products that solve real world problems and are user friendly.
       </p>
 
       <hr />
@@ -16,14 +15,22 @@ export default function SimplePortfolio() {
 
       <ul>
         <li>
-          <strong>HealthGuard Nepal</strong> –{' '}
-          <a href="https://healthguard.com.np" target="_blank">
-            healthguard.com.np
+          <strong>Gamingmandu </strong> –{' '}
+          <a href="https://gamingmandu.com" target="_blank">
+           gamingmandu.com
           </a>{' '}
-          – Internal business software
+          – Online giftcards and in app purchases selling platform
           <br />
-          Worked actively on admin, distributors, and members dashboards, API integration, and
-          dashboard UI.
+          Worked on admin dashboard, order management, product management, banner management and related features.
+        </li>
+        <li>
+          <strong>Healthguard Nepal </strong> –{' '}
+          <a href="https://healthguard.com.np" target="_blank">
+           helthguard.com.np
+          </a>{' '}
+          – Distributor and retailer management system
+          <br />
+          Worked on admin dashboard, distributor dashboard, RBAC, email features and related features.
         </li>
 
         <li>
@@ -42,19 +49,19 @@ export default function SimplePortfolio() {
           <a href="https://pnatechnical.com" target="_blank">
             pnatechnical.com
           </a>{' '}
-          – Website + internal custom software
+          – Website + Workforce Management System (WFM)
           <br />
-          Worked on almost everything: static website and all role-based dashboards.
+          Worked on website landing page, WFM dashboard, employee management, auth and related features.
         </li>
 
         <li>
-          <strong>Company Management System (Mayamatrix)</strong> –{' '}
+          <strong>Company Management System</strong> –{' '}
           <a href="https://companymanagementsystem.com" target="_blank">
             companymanagementsystem.com
           </a>{' '}
-          – Internal custom software
+          – In House Company Management System for Mayamatrix Technologies
           <br />
-          Worked on admin dashboard, chat system, and employee dashboard.
+          Worked on admin dashboard, chat system, auth  and employee dashboard.
         </li>
       </ul>
 
@@ -66,9 +73,10 @@ export default function SimplePortfolio() {
       <h3>Frontend</h3>
       <ul>
         <li>JavaScript, TypeScript</li>
-        <li>React, Next.js</li>
-        <li>React Query</li>
+        <li>React.js, Next.js</li>
+        <li>React Query, React Hook form</li>
         <li>Tailwind CSS, shadcn/ui</li>
+        <li>Redux Toolkit, Zustand, Zod</li>
       </ul>
 
       <h3>Backend</h3>
@@ -87,7 +95,7 @@ export default function SimplePortfolio() {
       <h3>Authentication</h3>
       <ul>
         <li>Clerk, Kinde</li>
-        <li>NextAuth, Better Auth</li>
+        <li>NextAuth</li>
         <li>Appwrite Auth</li>
         <li>Custom JWT-based auth logic</li>
       </ul>
@@ -101,12 +109,12 @@ export default function SimplePortfolio() {
         <li>
           <strong>July 2025 – Oct 2025</strong> — Mayamatrix Technologies
           <br />
-          Full Stack Intern
+          Software Developer Intern
         </li>
         <li>
           <strong>Oct 2025 – Present</strong> — Mayamatrix Technologies
           <br />
-          Associate Full Stack Developer
+          Associate Software Developer
         </li>
       </ul>
 
