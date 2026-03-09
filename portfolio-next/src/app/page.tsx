@@ -107,7 +107,7 @@ export default function SimplePortfolio() {
                 Dipesh Aryal
               </h1>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
-                I am Full-Stack Web Developer with industry experience. I help businesses build professional websites and web applications to give online presence and grow customers.  Over the past 8+ months, I have shipped multiple live
+                I am Full-Stack Web Developer with industry experience. I help businesses build professional websites and web applications to give them online presence and grow customers.  Over the past year, I have shipped multiple live
                 products across static webpages, dashboards, e-commerce, and internal management systems.
               </p>
 
