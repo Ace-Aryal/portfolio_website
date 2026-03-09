@@ -83,7 +83,7 @@ const experiences = [
     company: 'Mayamatrix Technologies',
   },
   {
-    period: 'Oct 2025 - Present',
+    period: 'Oct 2025 - March 2026',
     role: 'Associate Software Developer',
     company: 'Mayamatrix Technologies',
   },
@@ -107,9 +107,8 @@ export default function SimplePortfolio() {
                 Dipesh Aryal
               </h1>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
-                I build production-ready web apps that solve real problems, balance speed with usability,
-                and scale with clean architecture. Over the past 8+ months, I have shipped multiple live
-                products across dashboards, e-commerce, and internal management systems.
+                I am Full-Stack Web Developer with industry experience. I help businesses build professional websites and web applications to give online presence and grow customers.  Over the past 8+ months, I have shipped multiple live
+                products across static webpages, dashboards, e-commerce, and internal management systems.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3">
@@ -133,11 +132,11 @@ export default function SimplePortfolio() {
             <div className="grid grid-cols-2 gap-3">
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                 <p className="text-xs uppercase tracking-wide text-slate-500">Products Shipped</p>
-                <p className="mt-1 text-3xl font-bold text-slate-900">5+</p>
+                <p className="mt-1 text-3xl font-bold text-slate-900">10+</p>
               </div>
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                 <p className="text-xs uppercase tracking-wide text-slate-500">Experience</p>
-                <p className="mt-1 text-3xl font-bold text-slate-900">8+ mo</p>
+                <p className="mt-1 text-3xl font-bold text-slate-900">1.5+ Yr</p>
               </div>
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                 <p className="text-xs uppercase tracking-wide text-slate-500">Current Role</p>
@@ -145,7 +144,7 @@ export default function SimplePortfolio() {
               </div>
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                 <p className="text-xs uppercase tracking-wide text-slate-500">Focus</p>
-                <p className="mt-1 text-sm font-semibold text-orange-700">Full Stack Delivery</p>
+                <p className="mt-1 text-sm font-semibold text-orange-700">Complete Product Delivery</p>
               </div>
             </div>
           </div>
