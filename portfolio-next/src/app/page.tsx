@@ -62,7 +62,7 @@ const skillGroups = [
   {
     title: 'Backend',
     icon: Terminal,
-    items: ['Next.js API routes and Server Actions', 'Express.js', 'Appwrite (BaaS)'],
+    items: ['Next.js API routes and Server Actions', 'Express.js', 'Appwrite (BaaS)','Django Rest Framework'],
   },
   {
     title: 'Database and ORM',
