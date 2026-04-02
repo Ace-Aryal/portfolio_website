@@ -136,7 +136,7 @@ export default function SimplePortfolio() {
               </div>
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                 <p className="text-xs uppercase tracking-wide text-slate-500">Experience</p>
-                <p className="mt-1 text-3xl font-bold text-slate-900">1.5+ Yr</p>
+                <p className="mt-1 text-3xl font-bold text-slate-900">1+ yr</p>
               </div>
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                 <p className="text-xs uppercase tracking-wide text-slate-500">Current Role</p>
