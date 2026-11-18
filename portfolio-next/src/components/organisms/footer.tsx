@@ -4,9 +4,9 @@ import Link from 'next/link'
 
 function Footer() {
   return (
-    <footer className="flex w-full items-center gap-10 border-t border-gray-200 py-3 text-center text-xs text-gray-500 sm:flex-row sm:justify-center sm:px-6 dark:border-gray-700 dark:text-gray-400">
-      <p>© {new Date().getFullYear()} Dipesh Aryal. All rights reserved.</p>
-      <div className="flex items-center gap-3 text-gray-500 dark:text-gray-400">
+    <footer className="terminal-footer">
+      <p><span>dipesh@portfolio</span>:~$ exit</p>
+      <div className="terminal-footer-links">
         <Link
           href="https://github.com/ace-aryal"
           target="_blank"
@@ -19,7 +19,7 @@ function Footer() {
           />
         </Link>
         <Link
-          href="https://www.linkedin.com/in/dipesh-aryal-612536272/"
+          href="https://www.linkedin.com/in/dipesh-red/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"

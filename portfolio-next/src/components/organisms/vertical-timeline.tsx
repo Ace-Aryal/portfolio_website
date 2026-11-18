@@ -35,7 +35,7 @@ function VerticalTimeline() {
     },
     {
       date: 'February 2024',
-      title: 'Found My Path in Full-Stack Web Development',
+      title: 'Found My Path in Software Engineering',
       summary:
         'Came across the bigger picture of web development and started learning full-stack development through Angela Yu’s bootcamp on Udemy.',
     },
@@ -80,20 +80,20 @@ function VerticalTimeline() {
       },
     },
     {
-      date: 'June 2025 – Present',
-      title: 'Diving Into Next.js with T3 stack',
-      summary: `Currently learning production-grade web development using Next.js, TypeScript, Auth and database providers
-         (Clerk, Kinde, Vercel databases), ORMs (Drizzle, Prisma) and more to build scalable full-stack applications.`,
+      date: 'August 2025 – January 2026',
+      title: 'Next.js Developer at MayaMatrix Technologies',
+      summary:
+        'Worked on production web applications in an on-site internship, developing full-stack features and gaining experience with real-world engineering workflows.',
       link: {
-        label: 'View Ace Gallery',
-        href: 'https://ace-gallary.vercel.app/',
+        label: 'View CSCA.ai',
+        href: 'https://csca.ai',
       },
     },
     {
-      date: 'Upcoming',
-      title: 'Looking Ahead',
+      date: 'May 2026 – Present',
+      title: 'Software Engineer (AI Focused) at WiseAdmit',
       summary:
-        'Excited to work on real-world projects by joining new teams,  contribute to open source, and continue growing as a full-stack developer.',
+        'Developing and maintaining AI-powered applications that help universities, partners, and students navigate international admissions.',
     },
   ]
 

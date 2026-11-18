@@ -16,12 +16,13 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Dipesh Aryal — Full Stack Web Developer',
+  title: 'Dipesh Aryal — Software Engineer',
   description:
-    'Portfolio of Dipesh Aryal, a passionate full stack web developer skilled in React, Next.js, Tailwind, MongoDB, and more.',
+    'Portfolio of Dipesh Aryal, a software engineer building intelligent AI-focused web products.',
   keywords: [
     'Dipesh Aryal',
-    'Full Stack Developer',
+    'Software Engineer',
+    'AI Developer',
     'Web Developer',
     'React Developer',
     'Next.js Portfolio',
@@ -36,9 +37,9 @@ export const metadata: Metadata = {
   creator: 'Dipesh Aryal',
   metadataBase: new URL('https://aryaldipesh.com.np'),
   openGraph: {
-    title: 'Dipesh Aryal — Full Stack Web Developer',
+    title: 'Dipesh Aryal — Software Engineer',
     description:
-      'Explore the projects, blog posts, and skills of Dipesh Aryal — a dedicated full stack developer.',
+      'Explore the projects, blog posts, and skills of Dipesh Aryal — a software engineer focused on AI and full-stack products.',
     url: 'https://aryaldipesh.com.np',
     siteName: 'Dipesh Aryal Portfolio',
     images: [
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dipesh Aryal — Full Stack Developer',
+    title: 'Dipesh Aryal — Software Engineer',
     description:
       "Visit Dipesh Aryal's portfolio showcasing React, Next.js, MongoDB projects and more.",
     creator: '@yourTwitterHandle', // optional
@@ -78,13 +79,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Providers>
-          <div className="flex w-full flex-col items-center">
-            <div className="w-full flex min-h-screen flex-col">
-              
-              <main className="flex grow flex-col"> {children}</main>
-              
-            </div>
-          </div>
+          <Header />
+          <main className="terminal-shell">{children}</main>
+          <Footer />
         </Providers>
       </body>
     </html>

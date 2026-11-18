@@ -15,8 +15,8 @@ export default function Intro() {
           </h1>
           <p className="max-w-md text-sm">
             <span className="text-lg font-semibold text-gray-500">|</span> I{`'`}m a passionate
-            frontend web developer who enjoys learning new technologies and building clean,
-            functional, and user-friendly web applications with{' '}
+            software engineer who enjoys building intelligent, functional, and reliable digital
+            products with{' '}
             <code className="bg-red-400">
               <Link href="https://create.t3.gg/">T3 Stack</Link>
             </code>{' '}
@@ -35,7 +35,7 @@ export default function Intro() {
               />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/dipesh-aryal-612536272/"
+              href="https://www.linkedin.com/in/dipesh-red/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
