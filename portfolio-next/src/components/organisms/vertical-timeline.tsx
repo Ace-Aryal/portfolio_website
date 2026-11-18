@@ -83,7 +83,7 @@ function VerticalTimeline() {
       date: 'August 2025 – January 2026',
       title: 'Next.js Developer at MayaMatrix Technologies',
       summary:
-        'Worked on production web applications in an on-site internship, developing full-stack features and gaining experience with real-world engineering workflows.',
+        'Worked on CSCA.ai, an AI-powered exam preparation and lead management platform. Built and maintained Next.js experiences for CSCA preparation, university information, lead workflows, and automated communications, while collaborating in production engineering workflows.',
       link: {
         label: 'View CSCA.ai',
         href: 'https://csca.ai',

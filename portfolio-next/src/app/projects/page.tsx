@@ -21,10 +21,11 @@ function AllProjectsPage() {
             <p className="project-kicker">AI-POWERED PLATFORM</p>
             <h2>csca.ai</h2>
             <p className="project-description">
-              An AI-powered exam preparation and lead management platform helping international
+              An AI-powered exam preparation and lead management platform that helps international
               students prepare for the China Scholastic Competency Assessment across Mathematics,
-              Physics, and Chemistry. Built with autonomous AI agents, CRM workflows, and automated
-              communication systems.
+              Physics, and Chemistry. I contributed to the Next.js application, including exam
+              preparation experiences, university and results information, CRM workflows, and
+              automated communication systems.
             </p>
 
             <div className="project-actions">

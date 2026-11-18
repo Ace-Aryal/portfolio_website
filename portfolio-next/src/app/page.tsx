@@ -85,7 +85,7 @@ export default function PortfolioHome() {
           <article>
             <p className="current-label">FEATURED</p>
             <Link href="/projects" className="current-project">csca.ai <ArrowRight size={16} /></Link>
-            <p>Exploring AI-powered ideas through software.</p>
+            <p>Built exam-preparation, CRM, and AI-powered communication experiences for international students.</p>
           </article>
         </div>
       </section>
